@@ -1,26 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HellooooWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-P7-vKh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lb-6k-ODg">
+                                <rect key="frame" x="125" y="269" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Welcome">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="welcomePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdw-UD-7Ok"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hello-Cookie" translatesAutoresizingMaskIntoConstraints="NO" id="TO1-2x-rG7">
+                                <rect key="frame" x="30" y="39.5" width="260" height="89"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.37576298130000002" blue="0.43242286819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TO1-2x-rG7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Dl-Jz-fYl"/>
+                            <constraint firstItem="TO1-2x-rG7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="LAP-rp-w8d"/>
+                            <constraint firstAttribute="trailing" secondItem="TO1-2x-rG7" secondAttribute="trailing" constant="30" id="LNp-o0-LWJ"/>
+                            <constraint firstItem="TO1-2x-rG7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="RWI-Jb-EGa"/>
+                            <constraint firstItem="gPc-P7-vKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vqs-uB-pSe"/>
+                            <constraint firstItem="5lb-6k-ODg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YUq-1J-Pm2"/>
+                            <constraint firstAttribute="trailing" secondItem="gPc-P7-vKh" secondAttribute="trailing" id="a13-8d-PUp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gPc-P7-vKh" secondAttribute="bottom" id="lCa-oe-ir4"/>
+                            <constraint firstItem="gPc-P7-vKh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v79-k8-aeE"/>
+                            <constraint firstItem="5lb-6k-ODg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yRk-TK-cb8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="gPc-P7-vKh" id="NO7-dv-Xhj"/>
+                        <outlet property="titleImage" destination="TO1-2x-rG7" id="KcF-2P-QIg"/>
+                        <outlet property="welcomeBtn" destination="5lb-6k-ODg" id="bYh-rR-MgC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="138.38028169014083"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hello-Cookie" width="798" height="89"/>
+        <image name="bg" width="2560" height="1440"/>
+    </resources>
 </document>
